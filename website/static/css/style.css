@@ -1151,6 +1151,7 @@ textarea#comment::placeholder {
     width: 100%;
     float: left;
     font-size: 40px;
+    padding-top:30px;
     text-transform: uppercase;
     color: #000000;
     font-weight: bold;

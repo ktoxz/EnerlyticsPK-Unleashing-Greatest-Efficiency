@@ -14,17 +14,17 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="../static/css/style.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="../static/css/responsive.css">
       <!-- fevicon -->
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- font css -->
       <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="../static/css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    </head>
@@ -32,7 +32,7 @@
       <div class="header_section">
          <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <a class="navbar-brand"href="index.html"><img src="../static/images/logo.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
@@ -42,13 +42,10 @@
                         <a class="nav-link" href="index.html">About</a>
                      </li>
                      <li class="nav-item active">
-                        <a class="nav-link" href="about.html">Definition</a>
+                        <a class="nav-link" href="definition.html">Definition</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="generation.html">Generation</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="result.html">Result</a>
+                        <a class="nav-link" href="generation.html">Generator</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -70,39 +67,49 @@
       <!-- news section start -->
       <div class="news_section layout_padding">
          <div class="container">
-            <h1 class="news_taital">Definition</h1>
+            <h1 class="news_taital">Definition-output</h1>
             <div class="news_section_2">
                <div class="news_box">
                   <div id="custom_slider" class="carousel slide" data-ride="carousel">
                      <div class="carousel-inner">
                         <div class="carousel-item active">
-                           <div class="news_img"><img src="images/news-img.png"></div>
+                           <div class="news_img"><img src="../static/images/news-img.png"></div>
                            <h2 class="does_taital">Global active power</h2>
                            <p class="dummy_text">Active power is the power consumed across resistive elements in an electrical system, measured in kilowatts. It represents the transformation of electrical energy into other forms of energy such as heat energy, mechanical energy, etc. 
                               Basically, global active power is the predicted total active power consumed by the household at that moment (measured in kilowatts)</p>
                         </div>
                         <div class="carousel-item">
-                           <div class="news_img"><img src="images/news-img.png"></div>
+                           <div class="news_img"><img src="../static/images/news-img.png"></div>
                            <h2 class="does_taital">Global reactive power</h2>
                            <p class="dummy_text">Reactive power, also known as imaginary power, is a component of power in an alternating current (AC) system that oscillates between the source and reactive elements such as inductors and capacitors. It represents the power associated with the exchange of energy between the source and the reactive elements without performing actual work.
                               Basically, global reactive power is the predicted total reactive power consumed by the household at that moment (measured in kilowatts)</p>
                         </div>
-                        <div class="carousel-item">
-                           <div class="news_img"><img src="images/news-img.png"></div>
-                           <h2 class="does_taital">Voltage (V)</h2>
-                           <p class="dummy_text">Voltage is the electric potential difference between two points in an electric circuit. It represents the force or energy per unit charge required to move an electric charge from one point to another. 
-                           </p>
+                     </div>
+                     <a class="carousel-control-next" href="#custom_slider" role="button" data-slide="next">
+                     <i class="fa fa-arrow-right"></i>
+                     </a>
+                  </div>
+                 </div>
+            </div>
+            <h1 class="news_taital">Definition-input</h1>
+            <div class="news_section_2">
+               <div class="news_box">
+                  <div id="custom_slider" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="news_img"><img src="../static/images/def-voltage.jpg"></div>
+                           <h2 class="does_taital">Voltage</h2>
+                           <p class="dummy_text">Voltage is the electric potential difference between two points in an electric circuit. It represents the force or energy per unit charge required to move an electric charge from one point to another.                            </p>
                         </div>
                         <div class="carousel-item">
-                           <div class="news_img"><img src="images/news-img.png"></div>
-                           <h2 class="does_taital">Global Intensity (A)</h2>
-                           <p class="dummy_text">Intensity is the amount of energy or power transferred per unit area in a wave or radiation during a unit of time. It represents the strength or concentration of a wave or radiation at a particular point.  Basically, global intensity is the average current intensity delivered to the household (measured in amps)
-                              </p>
+                           <div class="news_img"><img src="../static/images/news-img.png"></div>
+                           <h2 class="does_taital">Global intensity</h2>
+                           <p class="dummy_text">Intensity is the amount of energy or power transferred per unit area in a wave or radiation during a unit of time. It represents the strength or concentration of a wave or radiation at a particular point. Basically, global intensity is the average current intensity delivered to the household (measured in amps)</p>
                         </div>
                         <div class="carousel-item">
-                           <div class="news_img"><img src="images/news-img.png"></div>
-                           <h2 class="does_taital">Sub_metering </h2>
-                           <p class="dummy_text">In this model, we will take in 3 sub metering, which are the active power consumed by the kitchen, the laundry room and  the electric water heater, air conditioner, respectively (all measured in kilowatts). By taking these 3 factors, we can briefly analyze the effects of 3 different types of electrical devices on power consumption. </p>
+                           <div class="news_img"><img src="../static/images/news-img.png"></div>
+                           <h2 class="does_taital">Sub_metering</h2>
+                           <p class="dummy_text">n this model, we will take in 3 sub metering, which are the active power consumed by the kitchen, the laundry room and  the electric water heater, air conditioner, respectively (all measured in kilowatts). By taking these 3 factors, we can briefly analyze the effects of 3 different types of electrical devices on power consumption.</p>
                         </div>
                      </div>
                      <a class="carousel-control-next" href="#custom_slider" role="button" data-slide="next">
@@ -113,6 +120,7 @@
             </div>
          </div>
       </div>
+      
       <!-- news section end -->
       <!-- footer section start -->
       <div class="footer_section layout_padding">
@@ -135,7 +143,7 @@
                </div>
                <div class="footer_logo">
                   <a href="indexz.html">
-                     <img src="images/logo.png">
+                     <img src="../static/images/logo.png">
                </div>
                <div class="social_icon">
                <ul>
@@ -156,14 +164,14 @@
       </div>
       <!-- copyright section end -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/js/popper.min.js"></script>
+      <script src="../static/js/bootstrap.bundle.min.js"></script>
+      <script src="../static/js/jquery-3.0.0.min.js"></script>
+      <script src="../static/js/plugin.js"></script>
       <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../static/js/custom.js"></script>
       <!-- javascript --> 
    </body>
 </html>
