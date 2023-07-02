@@ -1,8 +1,8 @@
-import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
+import tensorflowjs as tfjs
 
 #Load the training file and label
 df = pd.read_csv('Cleaned_Electricity_Data.csv')
@@ -50,3 +50,7 @@ my_model = build_model(learning_rate)
 trained_weight, trained_bias, epochs, rmse = train_model(my_model, df,
                                                          ytrain, epochs,
                                                          my_batch_size)
+
+tf.saved_model.save(my_model, 'my_model')
+
+tfjs.converters.convert_tf_saved_model('my_model', 'tfjs_model')
