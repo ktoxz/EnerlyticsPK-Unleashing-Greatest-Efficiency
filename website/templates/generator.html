@@ -1,0 +1,61 @@
+{%extends "temp.html" %} 
+{%block content%}
+<!-- request -->
+<div id="contact" class="request">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="titlepage">
+               <h2>Input information</h2>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="black_bg">
+               <div class="row">
+                  <form class="main_form" method="POST">
+                     <div class="row">
+                        <div class="col-lg-12 form-group" >
+                           <input class="contactus" placeholder="input active power" type="text" 
+                           name="activepower" id="activepower"> 
+                        </div>
+                        <div class="col-lg-12 form-group">
+                           <input class="contactus" placeholder="input reactive power" type="text"
+                              name="reactivepower" id="reactivepower"> 
+                        </div>
+                        <div class="col-lg-12 form-group">
+                           <input class="contactus" placeholder="input voltage" type="text" name="voltage" id="voltage">
+                        </div>
+                        <div class="col-lg-12 form-group">
+                           <input class="contactus" placeholder="input intensity" type="text" name="intensity" id="intensity">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">View result</button>
+                        
+                     </div>
+                  </form>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end request -->
+{%endblock%}
+
+{%block active%}
+<li class="nav-item">
+   <a class="nav-link" href="/index">About</a>
+</li>
+<li class="nav-item">
+   <a class="nav-link" href="/definition">Definition</a>
+</li>
+<li class="nav-item active" >
+   <a class="nav-link" href="/generator">Generator</a>
+</li>
+<li class="nav-item">
+   <a class="nav-link" href="/contact">Contact</a>
+</li>
+{%endblock%}
