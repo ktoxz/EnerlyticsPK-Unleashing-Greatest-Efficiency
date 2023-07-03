@@ -28,6 +28,10 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
+      {%block scriptHead%}
+
+      {%endblock%}
+   
    </head>
     <body>
         <!--header section start-->
@@ -116,8 +120,8 @@
         </div>
         <!-- copyright section end -->
         <!-- Javascript files-->
-        <script src="../static/js/jquery.min.js"></script>
-        <script src="../static/js/popper.min.js"></script>
+        <script src="../static/js/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="../static/js/popper.min.js" crossorigin="anonymous"></script>
         <script src="../static/js/bootstrap.bundle.min.js"></script>
         <script src="../static/js/jquery-3.0.0.min.js"></script>
         <script src="../static/js/plugin.js"></script>

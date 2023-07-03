@@ -1,8 +1,8 @@
 {%extends "temp.html" %} 
 {%block content%}
-{%for item in args%}
-   {{item}}
-{%endfor%}
+<p>Your input: {%for item in args%}{{item}}{%endfor%}</p>
+<p id="ActivePower">Your result here:</p>
+<p id="ReactivePower">Your result here:</p>
 <div class="about_section layout_padding margin_top90">
     <div class="container">
        <div class="row">
@@ -41,10 +41,42 @@
 
 {%block script%} 
 <script>
-   Console.log("begin")
-   const model = await tf.loadLayersModel('../static/tfjs_model/model.json');
-   const input = tf.tensor2d([args]);
-   const prediction = model.predict(input);   
-   Console.log(prediction)
+   function convertString(userInput){
+      let inputString = userInput;
+      let numberList = [];
+
+      let numberStrings = inputString.replace(/[\[\]]/g, "").split(",");
+
+      numberStrings.map((numberString) => {
+      let number = Number(numberString);
+      numberList.push(number);
+      });
+
+      console.log(numberList)
+      console.log(typeof(numberList))
+      return numberList
+   }
+
+   console.log("begin");
+   async function loadModel(){
+      const model = await tf.loadLayersModel('../static/tfjs_model2/model.json');
+      const userInput = '{{args}}';
+      const userInputArray = convertString(userInput)
+      const input = tf.tensor2d(userInputArray, [1, 5]);
+      const prediction = model.predict(input)
+      prediction.data().then((predictionData) => {
+         console.log('Prediction', predictionData);
+
+         const ActivePower = document.getElementById("ActivePower");
+         ActivePower.textContent = "Predicted active power: " + predictionData[0].toFixed(3) + " kWh";
+         const ReactivePower = document.getElementById("ReactivePower");
+         ReactivePower.textContent = "Predicted reactive power: " + predictionData[1].toFixed(3) + " kWh";
+      });
+
+
+   }
+   loadModel();
 </script>
+
 {%endblock%}
+

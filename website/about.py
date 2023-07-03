@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 
-about = Blueprint('about', __name__)
+about = Blueprint('about', __name__, static_folder='static')
 
 @about.route('/')
 def home():
