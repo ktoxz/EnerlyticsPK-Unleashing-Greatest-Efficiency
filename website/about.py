@@ -18,5 +18,6 @@ def contact():
 def definition():
     return render_template("definition.html")
 
-
-
+@about.route('/graph')
+def graph():
+    return render_template("graph.html")

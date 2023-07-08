@@ -1,0 +1,57 @@
+{%extends "temp.html" %} 
+{%block content%}
+      <!-- about section start -->
+      <div class="news_section layout_padding">
+        <div class="container">
+           <h1 class="news_taital">Analysis</h1>
+           <div class="news_section_2">
+              <div class="news_box">
+                 <div id="custom_slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                       <div class="carousel-item active">
+                        <p>In the future, we will create an analysis model that allows you to keep track of your electricity consumption data by visualizing the file you upload to our website. 
+                            </p>
+                         <p>You can have a general view of your household global active and reactive power over a one-month period : 
+                            </p>
+                          <div class="news_img"><img src="../static/images/graph-Active_Reactive-January.png"></div>
+                          </div>
+                       <div class="carousel-item">
+                            <p>Or you can also look at which time of the day does the global active and reactive power rise the most:</p>
+                          <div class="news_img"><img src="../static/images/graph-Active_Reactive-FirstJan.png"></div>
+                       </div>
+                       <div class="carousel-item">
+                          <p>You can compare the active power and reactive power consumed by each rooms in your house : </p>
+                          <div class="news_img"><img src="../static/images/graph-combinedSubMetering-January.png"></div>
+                       </div> 
+                       <div class="carousel-item">
+                        <p>Most importantly, you are able to see the relationship between each room consumption with the total number of your household. By this, you can come up with a strategy to efficiently reduce the total active power by altering your usage with each room.  </p>
+                          <div class="news_img"><img src="../static/images/graph-Submetering123-January.png"></div>
+                       </div>
+                    </div>
+                    <a class="carousel-control-next" href="#custom_slider" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                    <a class="carousel-control-prev" href="#custom_slider" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                    </a>
+                 </div>
+              </div>
+           </div>
+           <div class="started_bt4"><a href="/index">Return Home</a></div>
+        </div>
+     </div>
+      <!-- about section end -->{%endblock%}
+
+{%block active%}
+<li class="nav-item">
+   <a class="nav-link" href="/index">About</a>
+</li>
+<li class="nav-item active">
+   <a class="nav-link" href="/definition">Definition</a>
+</li>
+<li class="nav-item " >
+   <a class="nav-link" href="/generator">Generator</a>
+</li>
+<li class="nav-item">
+   <a class="nav-link" href="/contact">Contact</a>
+</li>
+{%endblock%}
